@@ -10,6 +10,8 @@ package card;
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author srinivsi
  */
+package card;
+
 import java.util.Scanner;
 
 public class CardTrick {
@@ -18,7 +20,7 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         
-        for (int i=0; i<magicHand.length; i++)
+        for (int i = 0; i < magicHand.length; i++)
         {
             Card c = new Card();
             c.setValue((int) (Math.random() * 13) + 1);
@@ -26,6 +28,13 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
+        // Hard-coded luckyCard
+        Card luckyCard = new Card();
+        luckyCard.setValue(10);  // Set the card number of your choice
+        luckyCard.setSuit("Spades");  // Set the suit of your choice
+        
+        magicHand[6] = luckyCard;
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the value of your card: ");
         int value = scanner.nextInt();
@@ -52,4 +61,3 @@ public class CardTrick {
         }
     }
 }
-
