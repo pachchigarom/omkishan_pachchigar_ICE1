@@ -9,6 +9,7 @@ package card;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author srinivsi
+ * Omkishan Pachchigar ID: 991648752.
  */
 
 
@@ -47,17 +48,22 @@ public class CardTrick {
         userCard.setSuit(suit);
         
         boolean found = false;
-        for (Card card : magicHand) {
-            if (card.equals(userCard)) {
+        for(Card card : magicHand) 
+        {
+            if (card.equals(userCard)) 
+            {
                 found = true;
                 break;
             }
         }
         
-        if (found) {
-            System.out.println("Congratulations! Your card is in the magic hand.");
-        } else {
-            System.out.println("Sorry! Your card is not in the magic hand.");
+        if(found) 
+        {
+            System.out.println("Congratulations! Your selected card is in the magic hand.");
+        } 
+        else 
+        {
+            System.out.println("Sorry! Your selected card is not in the magic hand.");
         }
     }
 }
